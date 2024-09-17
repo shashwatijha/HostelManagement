@@ -1,0 +1,56 @@
+{% extends 'layout1.html' %}
+
+{% block body %}
+
+  <h2>Veg Menu</h2>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Day</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+    </tr>
+    {% for m in vmenu %}
+      <tr>
+        <td>{{m.day}}</td>
+        <td>{{m.breakfast}}</td>
+        <td>{{m.lunch}}</td>
+        <td>{{m.dinner}}</td>
+       
+      </tr>
+    {% endfor %}
+  </table>
+  
+  <h2> Non-Veg Menu</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>Day</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+    </tr>
+    {% for n in nmenu %}
+      <tr>
+        <td>{{n.day}}</td>
+        <td>{{n.breakfast}}</td>
+        <td>{{n.lunch}}</td>
+        <td>{{n.dinner}}</td>
+       
+      </tr>
+    {% endfor %}
+  </table>
+
+  <h3> Veg Mess fees:25,000/-</h3>
+  <br> <h3> Non-Veg Mess fees:50,000/-</h3>
+
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.type1, class_="form-control")}}
+    </div>
+    
+    <p><input type="submit" class="btn btn-primary" value="Save"></p>
+  </form>
+ 
+{% endblock %}

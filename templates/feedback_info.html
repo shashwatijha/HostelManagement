@@ -1,0 +1,23 @@
+{% extends 'layout2.html' %}
+
+{% block body %}
+  <h1>Feedback<small>for {{session.username}}</small></h1>
+ 
+  
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Student name</th>
+      <th>Feedback</th>
+      
+    </tr>
+    {% for student in students %}
+      <tr>
+        <td>{{student.username}}</td>
+        <td>{{student.txt|safe}}</td>
+       
+        
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

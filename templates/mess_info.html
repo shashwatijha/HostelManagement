@@ -1,0 +1,18 @@
+{% extends 'layout1.html' %}
+
+{% block body %}
+  <h1>Mess Details <small> of {{session.username}}</small></h1>
+  
+ 
+ 
+   
+   
+ {% for d in data %}
+  <br>MESS TYPE:  {{d.mess_type}}
+  <br> SUPERVISOR:  {{d.supervisor}}
+  
+
+ {% endfor %}
+ 
+  
+{% endblock %}

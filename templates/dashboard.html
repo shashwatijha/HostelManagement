@@ -1,0 +1,27 @@
+{% extends 'layout1.html' %}
+
+{% block body %}
+  <h1 class="ex1">Dashboard <small> Welcome {{session.username}}</small></h1>
+ 
+ 
+ 
+   
+   <h2> Student Proflie </h2>
+{% for user in users %}
+  
+    <p >Registration Date: <small class="text-muted">{{ user.register_date }}</small></p>
+    
+    <p>First Name: {{user.first_name }}</p>
+    <p>Second Name:  {{user.second_name}}</p>
+    <p>Last Name: {{user.last_name}}</p>
+    <p>Email ID: {{user.email}}</p>
+    <p>Gender: {{user.gender}}</p>
+    <p>GPA: {{user.GPA}}</p>
+    <p>Contact Number: {{user.contactno}}</p>
+    <p>Registration Date: {{user.register_date}}</p>
+    <li><a href="/update">Update profile</a></li>
+ 
+ {% endfor %}
+ 
+  
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout2.html' %}
+
+{% block body %}
+  <h1>Ward Details</h1>
+  
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th> Parent Email</th>
+      <th>Gender</th>
+      <th>GPA</th>
+      <th>Contact_no</th>
+      <th>Mess_type</th>
+    </tr>
+    {% for student in students %}
+      <tr>
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.parent_email}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.GPA}}</td>
+        <td>{{student.contactno}}</td>
+        <td>{{student.mess_type}}</td>
+
+        
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

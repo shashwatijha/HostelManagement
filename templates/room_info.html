@@ -1,0 +1,18 @@
+{% extends 'layout1.html' %}
+
+{% block body %}
+  <h1>Room Details <small> of {{session.username}}</small></h1>
+  
+ 
+ 
+   
+   
+ {% for d in data %}
+  <br>ROOM NUMBER:  {{d.room_no}}
+  <br> BLOCK NUMBER:  {{d.block_no}}
+  
+
+ {% endfor %}
+ 
+  
+{% endblock %}

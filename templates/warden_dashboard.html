@@ -1,0 +1,29 @@
+{% extends 'layout2.html' %}
+
+{% block body %}
+  <h1 class="ex1">Dashboard <small> Welcome {{session.username}}</small></h1>
+ 
+ 
+ 
+   
+   <h2> Warden Proflie </h2>
+{% for warden in wardens %}
+  
+    
+    
+    <p>First Name: {{warden.first_name }}</p>
+    <p>Second Name:  {{warden.second_name}}</p>
+    <p>Last Name: {{warden.last_name}}</p>
+    <p>Email ID: {{warden.email}}</p>
+    <p>Gender: {{warden.gender}}</p>
+    <p>Contact Number: {{warden.contactno}}</p>
+
+
+ 
+ {% endfor %}
+
+ 
+ <h3> Number of students under the warden is {{result}}</h3>
+
+
+{% endblock %}

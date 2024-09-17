@@ -1,0 +1,29 @@
+{% extends 'layout2.html' %}
+
+{% block body %}
+  <h1>Send Mail</h1>
+
+   {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.recipient, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.receiver_mail, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.subject, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.body, class_="form-control", id="editor")}}
+    </div>
+    
+    <p><input type="submit" class="btn btn-primary" value="Send"></p>
+  </form>
+
+  
+  
+
+
+  
+{% endblock %}
